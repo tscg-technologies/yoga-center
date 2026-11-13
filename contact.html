@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Registration | YOGA CENTER</title>
+  <meta name="description" content="Register for yoga classes, book demo sessions, or contact YOGA CENTER in Hyderabad, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Demo Notice Bar -->
+  <aside class="demo-disclaimer-bar">
+    <strong>Demo Notice:</strong> Sample yoga center website for preview and exploration. All schedules, fees, and contact details are illustrative placeholders.
+  </aside>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="index.html" class="logo-text">
+        <span class="logo-symbol">ॐ</span>
+        YOGA CENTER
+      </a>
+
+      <button class="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="yoga-classes.html" class="nav-link">Yoga Classes</a>
+        <a href="meditation.html" class="nav-link">Meditation</a>
+        <a href="instructors.html" class="nav-link">Instructors</a>
+        <a href="membership.html" class="nav-link">Membership & Schedule</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">Join a Class</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Hero Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <span class="sub-title">Connect & Register</span>
+        <h1>Contact & Class Registration</h1>
+        <p>Get in touch with YOGA CENTER or complete our registration enquiry form below to simulate joining a yoga class.</p>
+      </div>
+    </section>
+
+    <!-- Main Form & Contact Info Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items: flex-start; gap: 3.5rem;">
+          
+          <!-- Registration Form Card -->
+          <div>
+            <div class="form-card">
+              <span class="sub-title">Online Enquiry</span>
+              <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Yoga Class Registration</h2>
+              <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Select your desired program and preferred batch. Fields marked with <span style="color: var(--color-terracotta);">*</span> are required.
+              </p>
+
+              <!-- Dynamic Alert Message Container -->
+              <div id="reg-alert-box" class="alert-box" role="alert"></div>
+
+              <form id="yoga-registration-form" novalidate>
+                <!-- Participant Full Name -->
+                <div class="form-group">
+                  <label for="reg-name" class="form-label">Participant Full Name <span class="required">*</span></label>
+                  <input type="text" id="reg-name" name="name" class="form-control" placeholder="e.g. Priya Sharma" required>
+                  <div class="error-msg">Please enter your full name (minimum 2 characters).</div>
+                </div>
+
+                <!-- Email & Phone Row -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="reg-email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="reg-email" name="email" class="form-control" placeholder="name@example.com" required>
+                    <div class="error-msg">Please enter a valid email address.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-phone" class="form-label">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="reg-phone" name="phone" class="form-control" placeholder="+91 98765 43210" required>
+                    <div class="error-msg">Please enter a valid phone number.</div>
+                  </div>
+                </div>
+
+                <!-- Program Selection Dropdown -->
+                <div class="form-group">
+                  <label for="reg-program" class="form-label">Program Selection <span class="required">*</span></label>
+                  <select id="reg-program" name="program" class="form-control" required>
+                    <option value="" disabled selected>-- Select a Yoga or Wellness Program --</option>
+                    <optgroup label="Classical & Flow Yoga">
+                      <option value="Hatha Yoga">Hatha Yoga (₹300 demo)</option>
+                      <option value="Vinyasa Yoga">Vinyasa Yoga (₹300 demo)</option>
+                      <option value="Ashtanga Yoga">Ashtanga Yoga (₹350 demo)</option>
+                      <option value="Gentle Yoga">Gentle Yoga (₹300 demo)</option>
+                      <option value="Power Yoga">Power Yoga (₹350 demo)</option>
+                      <option value="Flexibility Yoga">Flexibility Yoga (₹300 demo)</option>
+                    </optgroup>
+                    <optgroup label="Beginners & Meditation">
+                      <option value="Beginner Yoga">Yoga for Beginners (₹199 demo)</option>
+                      <option value="Basic Yoga Training">Basic Yoga Training (₹999 weekly demo)</option>
+                      <option value="Meditation">Guided Meditation (₹250 demo)</option>
+                      <option value="Pranayama">Pranayama Breathing (₹250 demo)</option>
+                      <option value="Relaxation Practice">Relaxation Practice (₹250 demo)</option>
+                    </optgroup>
+                    <optgroup label="Memberships & Special Sessions">
+                      <option value="Trial Yoga Session">Trial Yoga Session (₹199)</option>
+                      <option value="Weekly Yoga Plan">Weekly Yoga Plan (₹999)</option>
+                      <option value="Monthly Yoga Membership">Monthly Yoga Membership (₹2,499)</option>
+                      <option value="Quarterly Membership">Quarterly Membership (₹6,499)</option>
+                      <option value="Annual Membership">Annual Membership (₹19,999)</option>
+                      <option value="Personal Yoga Training">Personal Yoga Training (₹800/session)</option>
+                      <option value="Weekend Yoga Workshop">Weekend Yoga Workshop (₹999)</option>
+                    </optgroup>
+                  </select>
+                  <div class="error-msg">Please select a program.</div>
+                </div>
+
+                <!-- Experience Level & Preferred Session Row -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="reg-experience" class="form-label">Experience Level</label>
+                    <select id="reg-experience" name="experience" class="form-control">
+                      <option value="Beginner" selected>Beginner (Little or no prior practice)</option>
+                      <option value="Intermediate">Intermediate (Practicing occasionally)</option>
+                      <option value="Advanced">Advanced (Consistent daily practice)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-session-time" class="form-label">Preferred Session</label>
+                    <select id="reg-session-time" name="session_time" class="form-control">
+                      <option value="Morning" selected>Morning (6:00 AM – 9:00 AM)</option>
+                      <option value="Afternoon">Afternoon (11:00 AM – 1:00 PM)</option>
+                      <option value="Evening">Evening (5:00 PM – 8:00 PM)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Preferred Start Date & Age Group Row -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="reg-date" class="form-label">Preferred Start Date <span class="required">*</span></label>
+                    <input type="date" id="reg-date" name="start_date" class="form-control" required>
+                    <div class="error-msg">Please select a preferred start date.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="reg-age" class="form-label">Age Group Selection</label>
+                    <select id="reg-age" name="age_group" class="form-control">
+                      <option value="18-29">18–29 years</option>
+                      <option value="30-49" selected>30–49 years</option>
+                      <option value="50-64">50–64 years</option>
+                      <option value="65+">65+ years (Senior-friendly)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Additional Message / Health Notes -->
+                <div class="form-group">
+                  <label for="reg-message" class="form-label">Additional Message / Wellness Goals</label>
+                  <textarea id="reg-message" name="message" class="form-control" rows="3" placeholder="Tell us about any specific goals, joint sensitivities, or questions..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 0.95rem;">Submit Registration Enquiry</button>
+
+                <!-- Demo Notice Disclaimer -->
+                <div class="form-disclaimer">
+                  🔒 <strong>Frontend Demonstration Only:</strong> This registration form is a simulation for website demonstration. No personal information is stored or transmitted to external servers, and submitting will not book a real reservation.
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contact Information & Address Details -->
+          <div>
+            <!-- REUSABLE IMAGE PLACEHOLDER 1: yoga-center-hero -->
+            <!-- Image Replacement Comment: Replace below container with yoga-center-hero.jpg -->
+            <div class="yoga-placeholder yoga-center-hero" style="min-height: 220px; margin-bottom: 2rem;">
+              <span class="placeholder-badge">Placeholder: yoga-center-hero</span>
+              <div class="placeholder-label">Visit YOGA CENTER</div>
+              <p class="placeholder-caption">Find your peaceful sanctuary in the heart of Hyderabad.</p>
+            </div>
+
+            <div class="card" style="margin-bottom: 2rem;">
+              <span class="sub-title">Demonstration Details</span>
+              <h3 style="margin-bottom: 1.2rem;">Studio Contact Information</h3>
+
+              <ul style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <span style="font-size: 1.3rem;">📍</span>
+                  <div>
+                    <strong>Studio Address</strong>
+                    <p style="margin: 0; font-size: 0.92rem;">Main Road, Hyderabad, Telangana, India</p>
+                    <small style="color: var(--color-muted-grey);">Demonstration location address</small>
+                  </div>
+                </li>
+
+                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <span style="font-size: 1.3rem;">📞</span>
+                  <div>
+                    <strong>Direct Phone</strong>
+                    <p style="margin: 0; font-size: 0.92rem;">+91 90000 00000</p>
+                    <small style="color: var(--color-muted-grey);">Sample demo contact</small>
+                  </div>
+                </li>
+
+                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <span style="font-size: 1.3rem;">✉️</span>
+                  <div>
+                    <strong>Email Address</strong>
+                    <p style="margin: 0; font-size: 0.92rem;">demo@example.com</p>
+                    <small style="color: var(--color-muted-grey);">Sample demo inbox</small>
+                  </div>
+                </li>
+
+                <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <span style="font-size: 1.3rem;">⏰</span>
+                  <div>
+                    <strong>Opening Hours</strong>
+                    <p style="margin: 0; font-size: 0.92rem;">Monday to Saturday: 6:00 AM – 8:00 PM</p>
+                    <p style="margin: 0; font-size: 0.92rem; color: var(--color-olive);">Sunday: Special sessions & workshops only</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- General Inquiries Form -->
+            <div class="card">
+              <h4 style="margin-bottom: 0.8rem;">Send a Quick Note</h4>
+              <div id="contact-alert-box" class="alert-box"></div>
+              <form id="yoga-contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Your Question <span class="required">*</span></label>
+                  <textarea id="contact-message" class="form-control" rows="2" placeholder="How can we assist you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Send Quick Message</button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs on Registration -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="sub-title">Registration Inquiries</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about registering and attending your first session.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How soon can I begin after submitting an enquiry?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>In a real studio setting, our team would contact you within 24 hours to confirm your preferred batch timing and prepare your orientation. (On this demo site, the form is an instant client-side preview!)</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What if I need to reschedule a booked class?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Members can easily reschedule or pause class attendance with 12 hours advance notice via phone or email.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are trial sessions refundable or transferable?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Demonstration passes are illustrative only. In typical studio policy, trial sessions can be credited toward any monthly membership enrollment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Standard Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-logo">ॐ YOGA CENTER</span>
+          <p class="footer-desc">
+            A peaceful sanctuary dedicated to holistic wellness, authentic yoga practices, mindful breathwork, and inner balance for practitioners of all experience levels.
+          </p>
+          <p style="font-size: 0.8rem; color: #889489;">* Pure frontend demonstration website.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Yoga Programs</a></li>
+            <li><a href="yoga-classes.html">Hatha & Vinyasa</a></li>
+            <li><a href="meditation.html">Meditation & Breath</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Programs & Plans</h4>
+          <ul class="footer-links">
+            <li><a href="programs.html">Traditional Hatha</a></li>
+            <li><a href="yoga-classes.html">Dynamic Vinyasa</a></li>
+            <li><a href="meditation.html">Guided Meditation</a></li>
+            <li><a href="meditation.html">Pranayama Sessions</a></li>
+            <li><a href="membership.html">Membership Plans</a></li>
+            <li><a href="membership.html">Weekly Class Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Demo Contact Info</h4>
+          <ul class="footer-contact">
+            <li>📍 Main Road, Hyderabad, Telangana, India</li>
+            <li>📞 +91 90000 00000</li>
+            <li>✉️ demo@example.com</li>
+            <li>⏰ Mon–Sat: 6:00 AM – 8:00 PM</li>
+            <li>🌿 Sunday: Special Sessions Only</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 YOGA CENTER. All rights reserved. Sample demonstration website.</p>
+        <p>Built with clean HTML5, CSS3, and Vanilla JavaScript. Prepared for future image integration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
